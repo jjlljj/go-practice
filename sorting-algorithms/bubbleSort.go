@@ -17,6 +17,6 @@ func bubbleSort(array []int) []int {
 func main() {
   var unsorted = []int{3,2,5,1,4}
 
-    fmt.Println(bubbleSort(unsorted))
+  fmt.Println(bubbleSort(unsorted))
 }
 
