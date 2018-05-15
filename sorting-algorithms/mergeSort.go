@@ -2,9 +2,7 @@ package main
 
 import "fmt"
 
-var unsorted = []int{9,3,5,4,6,2,1,8,7}
-
-func merge(array []int) []int {
+func mergeSort(array []int) []int {
   if len(array) <= 1 {
     return array
   }
@@ -13,10 +11,10 @@ func merge(array []int) []int {
   var a []int = array[0:center]
   var b []int = array[center:]
 
-  return join(merge(a), merge(b))
+  return merge(mergeSort(a), mergeSort(b))
 }
 
-func join(a, b []int) []int {
+func merge(a, b []int) []int {
   var sorted []int
 
   for len(a) > 0 && len(b) > 0 {
@@ -39,5 +37,7 @@ func join(a, b []int) []int {
 }
 
 func main() {
-  fmt.Println(merge(unsorted))
+  var unsorted = []int{9,3,5,4,6,2,1,8,7}
+
+  fmt.Println(mergeSort(unsorted))
 }

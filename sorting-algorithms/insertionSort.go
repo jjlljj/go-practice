@@ -2,9 +2,7 @@ package main
 
 import "fmt"
 
-var unsorted = []int{5,3,2,7,1,4,6}
-
-func insertion(array []int) []int {
+func insertionSort(array []int) []int {
 
   for i :=0; i < len(array)-1; i++ {
     for j := i; j > 0; j-- {
@@ -17,5 +15,7 @@ func insertion(array []int) []int {
 }
 
 func main() {
-  fmt.Println(insertion(unsorted))
+  var unsorted = []int{5,3,2,7,1,4,6}
+
+  fmt.Println(insertionSort(unsorted))
 }
